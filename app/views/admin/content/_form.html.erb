@@ -148,7 +148,7 @@
     </ul>
   </div>    
 
-  <div class='separator'>
+  <div class='separator' id='merge' style='<%= "display: none;" if @article.id == nil || current_user.profile_id != 1 %>'>
 		<h4><%= _("Merge Articles") %></h4>
     <div class='class'>
       Article ID <%= text_field 'merge_with', {:autocomplete => 'off', :style => 'width: 100%'} %>
