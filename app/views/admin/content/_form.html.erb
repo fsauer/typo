@@ -147,6 +147,15 @@
       <%= render 'admin/content/attachment', { :attachment_num => 1, :hidden => false } -%>
     </ul>
   </div>    
+
+  <div class='separator'>
+		<h4><%= _("Merge Articles") %></h4>
+    <div class='class'>
+      Article ID <%= text_field 'merge_with', {:autocomplete => 'off', :style => 'width: 100%'} %>
+    </div>
+    <%= auto_complete_field 'merge_with', { :url => { :action => "auto_complete_for_merge_with"} }%>		
+    <%= link_to _("Merge"), {:controller => 'admin/categories', :action => 'new' }, :class => 'btn info' %>
+  </div>
   </div>
 
 </div>
